@@ -1,0 +1,19 @@
+<div class="card h-100 shadow-sm">
+  <div class="card-body">
+    <h5 class="card-title">
+      <i class="fa-solid fa-diagram-project me-2"></i>{{title}}
+    </h5>
+    <p class="card-text">{{description}}</p>
+
+    <ul class="list-inline mb-3">
+      {{#each skills}}
+        <li class="badge text-bg-light me-1">{{this}}</li>
+      {{/each}}
+    </ul>
+
+    <div class="d-flex gap-2">
+      <button class="btn btn-outline-primary btn-sm" data-edit="{{_id}}">Edit</button>
+      <button class="btn btn-outline-danger btn-sm" data-del="{{_id}}">Delete</button>
+    </div>
+  </div>
+</div>

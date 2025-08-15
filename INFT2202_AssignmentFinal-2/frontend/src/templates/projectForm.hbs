@@ -1,0 +1,23 @@
+<form id="project-form" class="mb-4 border p-3 rounded bg-white">
+  <div class="mb-3">
+    <label for="title" class="form-label">Project Title</label>
+    <input id="title" class="form-control" maxlength="50"
+           placeholder="alphanumeric, ≤ 50 chars"
+           value="{{title}}" required />
+  </div>
+
+  <div class="mb-3">
+    <label for="description" class="form-label">Description</label>
+    <textarea id="description" class="form-control" maxlength="200" required>{{description}}</textarea>
+  </div>
+
+  <div class="mb-3">
+    <label for="skills" class="form-label">Skills (comma-separated)</label>
+    <input id="skills" class="form-control" placeholder="HTML, CSS, JavaScript"
+           value="{{skillsCsv}}" />
+  </div>
+
+  <button type="submit" class="btn btn-{{#if _id}}primary{{else}}success{{/if}}">
+    {{#if _id}}Update Project{{else}}Add Project{{/if}}
+  </button>
+</form>
